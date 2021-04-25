@@ -5,6 +5,8 @@ install:
 	dotnet add package SharpPcap --version 5.4.0
 	cd src/ipk-sniffer && \
 	dotnet add package System.CommandLine --version 2.0.0-beta1.21216.1
+	cd src/ipk-sniffer && \
+	dotnet add package PacketDotNet --version 1.2.0
 
 clean:
 	cd src/ipk-sniffer && \
@@ -27,4 +29,4 @@ publish:
 
 run:
 	cd src/ipk-sniffer && \
-	dotnet run
+	dotnet run $(arguments)
