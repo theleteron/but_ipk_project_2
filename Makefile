@@ -25,7 +25,7 @@ publish:
 	dotnet publish -c Release -r linux-x64;
 # Warp CLI tool for .NET Core app deploy
 # https://github.com/dgiagio/warp#linux-1
-	warp-packer --arch linux-x64 --input_dir src/ipk-sniffer/bin/Release/net5.0/linux-x64/publish --exec ipk-sniffer --output ipk-sniffer
+	warp-packer --arch linux-x64 --input_dir src/ipk-sniffer/bin/Release/netcoreapp3.1/linux-x64/publish --exec ipk-sniffer --output ipk-sniffer
 
 run:
 	cd src/ipk-sniffer && \

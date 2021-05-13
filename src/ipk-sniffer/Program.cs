@@ -46,7 +46,7 @@ namespace IPKSniffer
                     description: "Show ICMPv4 & ICMPv6 packets"
                 ),
                 new Option<int>(
-                    aliases: new[] { "--n"},
+                    aliases: new[] { "-n"},
                     getDefaultValue: () => 1,
                     description: "Number of packet you want to capture"
                 )
@@ -173,8 +173,6 @@ namespace IPKSniffer
                 } else 
                 {
                     caputreMore = false;
-                    device.StopCapture();
-                    device.Close();
                 }
             });
 
